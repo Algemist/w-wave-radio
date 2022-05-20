@@ -46,6 +46,33 @@ a {
   cursor: pointer;
 }
 
+.btn {
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all .3s ease-in-out;
+
+  &__main {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &__secondary {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &--stroke {
+    border: 2px solid currentColor;
+    background-color: transparent;
+  }
+
+  &--fill {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+
 .list-reset {
   list-style: none;
   margin: 0;
@@ -104,4 +131,11 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--black);
 }

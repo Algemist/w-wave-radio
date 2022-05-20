@@ -1,3 +1,64 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="header__mobile">
+    <div class="container header__container">123</div>
+  </div>
+  <div class="header__top">
+    <div class="container header__container">
+      <a href="/" class="header__logo">
+        <img loading="lazy" src="img/logo.svg" class="image" width="160" height="20" alt="Логотип">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="#" class="nav__link">Подкасты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Передачи</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Гости</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Плейлисты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+        </ul>
+      </nav>
+      <button class="btn-reset search">
+        <svg class="search__icon">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <button class="btn-reset btn btn--stroke btn__secondary header__btn">Вход</button>
+    </div>
+  </div>
+  <div class="header__btm">
+    <div class="container header__container">
+      <ul class="list-reset header__list">
+        <li class="header__item"><a href="#" class="link">Новости</a></li>
+        <li class="header__item"><a href="#" class="link">Блоги</a></li>
+        <li class="header__item"><a href="#" class="link">Топы</a></li>
+        <li class="header__item"><a href="#" class="link">Опросы</a></li>
+        <li class="header__item"><a href="#" class="link">Рейтинги</a></li>
+        <li class="header__item"><a href="#" class="link">Реклама</a></li>
+      </ul>
+      <div class="header__status header-status header__prev">
+        <button class="btn-reset header-status__btn">
+          <svg class="header-status__icon">
+            <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+        <div class="header-status__text">
+          <span class="header-status__title">Ранее в эфире</span>
+          <h2 class="header-status__name"><a href="#" class="link">«Музыка»</a></h2>
+        </div>
+      </div>
+      <div class="header__status header-status header__next">
+        <button class="btn-reset header-status__btn">
+          <svg class="header-status__icon">
+            <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+        <div class="header-status__text">
+          <span class="header-status__title">Сейчас в эфире</span>
+          <h2 class="header-status__name"><a href="#" class="link">«Как так?»</a></h2>
+        </div>
+      </div>
+      <div class="age">
+        <span class="age__value">12+</span>
+      </div>
+    </div>
+  </div>
 </header>
