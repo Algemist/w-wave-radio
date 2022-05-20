@@ -52,7 +52,8 @@ a {
   border-radius: 40px;
   transition: all .3s ease-in-out;
 
-  &__main {
+  &-main {
+    padding: 25px 54px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -137,5 +138,13 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  color: var(--black);
+}
+
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
   color: var(--black);
 }

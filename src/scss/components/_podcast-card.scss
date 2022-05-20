@@ -1,0 +1,105 @@
+.podcast-card {
+  display: flex;
+  position: relative;
+  min-height: 140px;
+  transition: all .3s ease-in-out;
+
+  &__date {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    padding: 3px 6px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 10px;
+    color: var(--black);
+    background-color: var(--light-color);
+  }
+
+  &__time {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--black);
+  }
+
+  &__pic img {
+    height: 100%;
+  }
+
+  &__name {
+    max-width: 176px;
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--black);
+  }
+
+  &__author {
+    max-width: 176px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--text-gray);
+  }
+
+  &__btn-play {
+    @include flex-all-center;
+    position: absolute;
+    top: 33px;
+    right: 33px;
+    padding: 11px 12px;
+    border: 2px solid var(--text-gray);
+    border-radius: 100%;
+  }
+
+  &__icon {
+    width: 12px;
+    height: 16px;
+    fill: var(--text-gray);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  &__info {
+    position: relative;
+    padding-left: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &__ratings {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 30px;
+    border-top: 1px solid var(--light-color);
+  }
+
+  &__list {
+    @include flex-v-center;
+  }
+
+  &__item {
+    @include mr(30px);
+  }
+}
+
+.btn-rating {
+  @include flex-v-center;
+  color: var(--text-gray);
+  &__icon {
+    width: 12px;
+    height: 13px;
+    margin-right: 6px;
+    fill: currentColor;
+  }
+}

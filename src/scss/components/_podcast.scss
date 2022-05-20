@@ -1,0 +1,28 @@
+.podcast {
+  background-color:var(--light-color);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    align-items: flex-start;
+  }
+
+  &__grid {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &__btn {
+    width: 250px;
+    align-self: center;
+    color: var(--primary);
+  }
+}
