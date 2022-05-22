@@ -1,0 +1,49 @@
+.broadcast-card {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    position: relative;
+    top: -6px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 112px;
+    padding: 20px 16px;
+    border: 1px solid var(--light-color);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--black);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: auto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--text-gray);
+  }
+}
+
+
+.broadcast-link {
+  @include flex-v-center;
+  align-self: flex-start;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--black);
+  &__icon {
+    width: 28px;
+    height: 12px;
+    fill: currentColor;
+  }
+}
