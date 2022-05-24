@@ -1,0 +1,146 @@
+.about-us {
+  background-color: var(--black);
+
+  &__container {
+    padding-top: 94px;
+    padding-bottom: 33px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+
+  &__subtitle {
+    max-width: 623px;
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--text-gray);
+  }
+
+  &__descr {
+    max-width: 634px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: var(--text-gray);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+.form {
+  &__textarea {
+    height: 150px;
+    padding: 30px 32px;
+    grid-column: 2 span;
+    resize: none;
+  }
+
+  &__input {
+    padding: 25px 32px;
+    grid-column: 1 span;
+  }
+
+  &__btn {
+    width: 212px;
+    padding: 25px 54px;
+    grid-column: 2 span;
+  }
+
+  &__textarea,
+  &__input {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    outline: none;
+    border-radius: 30px;
+    background-color: transparent;
+
+    &::placeholder {
+      color: var(--text-gray);
+    }
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+
+    &-value {
+      padding-left: 22px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      color: var(--white);
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid var(--white);
+      }
+
+      &::after {
+        content: url("../img/custom-checkbox-icon.svg");
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+      }
+    }
+  }
+}
+
+.custom-checkbox {
+  display: none;
+
+  &:checked + .form__label-value::after {
+    opacity: 1;
+  }
+}
+
+.about-card {
+  &__name {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--white);
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+  }
+
+  &__pic img{
+    margin-bottom: 30px;
+  }
+}

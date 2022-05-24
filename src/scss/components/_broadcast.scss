@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 255px));
     gap: 30px;
+    padding-top: 14px;
   }
 
   &__aside {
