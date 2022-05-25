@@ -3,11 +3,15 @@
   &__container {
     padding-top: 94px;
     padding-bottom: 94px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
   }
 
   &__title {
     margin-bottom: 12px;
     color: var(--white);
+    grid-column: 12 span;
   }
 
   &__subtitle {
@@ -16,6 +20,7 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--text-gray);
+    grid-column: 12 span;
   }
 
   &__descr {
@@ -25,10 +30,12 @@
     font-size: 20px;
     line-height: 160%;
     color: var(--text-gray);
+    grid-column: 12 span;
   }
 }
 
 .accordion {
+  grid-column: 8 span;
   &__btn {
     @include flex-v-center;
     justify-content: space-between;
@@ -41,21 +48,39 @@
     border-top: 1px solid var(--text-gray);
     border-bottom: 1px solid var(--text-gray);
 
+    &.active .accordion__btn-icon {
+      transform: none;
+    }
+
     &-icon {
       width: 48px;
       height: 48px;
       fill: none;
       stroke: var(--text-gray);
       stroke-width: 2px;
+      transform: rotate(180deg);
+      transition: transform .3s ease-in-out;
     }
   }
 
   &__panel {
-    padding: 30px 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+
+    &.active {
+      padding: 30px 0;
+      max-height: 182px;
+    }
   }
 }
 
 .tabs {
+  &-container {
+    grid-column: 4 span;
+    max-width: 350px;
+  }
   &__nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -68,5 +93,58 @@
       line-height: 16px;
       color: var(--white);
     }
+  }
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-gray);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--white);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: var(--text-gray);
+  }
+
+  &__link {
+    padding: 12px 19.5px;
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--primary-light);
+    border: 2px solid var(--primary-light);
+    border-radius: 77px;
+  }
+
+  &__pic {
+    margin-bottom: 12px;
   }
 }
