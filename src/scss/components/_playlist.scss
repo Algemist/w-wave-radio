@@ -4,10 +4,17 @@
     display: flex;
     justify-content: space-between;
     padding: 94px 0;
+
+    @include big-desktop {
+      flex-direction: column;
+    }
   }
 
   &__aside {
     max-width: 350px;
+    @include big-desktop {
+      max-width: unset;
+    }
   }
 
   &__grid {
@@ -15,6 +22,12 @@
     grid-template-columns: repeat(4, minmax(120px, 160px));
     gap: 30px;
     padding-top: 14px;
+
+    @include big-desktop {
+     justify-self: center;
+     justify-content: center;
+     column-gap: 50px;
+    }
   }
 
   &__form {
@@ -29,6 +42,15 @@
       bottom: -30px;
       width: 100%;
       border: 1px solid var(--shade-gray);
+    }
+
+    @include big-desktop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      &::after {
+        content: none;
+      }
     }
   }
 
@@ -52,6 +74,12 @@
     position: relative;
     align-self: flex-start;
     cursor: pointer;
+
+    &:hover:not(:focus-visible) {
+      .playlist__label-value::before {
+        border-color: var(--primary);
+      }
+    }
 
     &-input {
       display: none;
@@ -103,6 +131,10 @@
     font-size: 16px;
     line-height: 22px;
     color: var(--text-gray);
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__copyright {
@@ -112,6 +144,10 @@
     font-size: 16px;
     line-height: 22px;
     color: var(--text-gray);
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__age {
@@ -125,5 +161,9 @@
     color: var(--text-gray);
     border: 1px solid var(--text-gray);
     border-radius: 100%;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 }

@@ -22,7 +22,7 @@
       color: var(--primary);
     }
 
-    &:hover:not(:focus-visible) {
+    &:active:not(:focus-visible) {
       color: var(--primary-shade);
     }
 

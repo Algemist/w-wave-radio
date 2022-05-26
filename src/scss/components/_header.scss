@@ -33,6 +33,20 @@
   &__btn {
     padding: 10px 30px;
     color: var(--black);
+
+    &:hover:not(:focus-visible) {
+      color: var(--white);
+      background-color: var(--black);
+    }
+
+    &:active:not(:focus-visible) {
+      border-color: var(--primary-shade);
+      background-color: var(--primary-shade);
+    }
+
+    &.focus-visible {
+      background-color: var(--primary-light);
+    }
   }
 
   &__list {
@@ -80,6 +94,13 @@
       color: var(--black);
     }
 
+    &__link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: var(--black);
+    }
+
     &__text {
       min-height: 35px;
       @include flex-v-center;
@@ -92,12 +113,32 @@
       width: 20px;
       height: 20px;
       margin-right: 10px;
+      outline: none;
+
+      &:hover:not(:focus-visible) {
+        .header-status__icon {
+          fill: var(--primary);
+        }
+      }
+
+      &:active:not(:focus-visible) {
+        .header-status__icon {
+          fill: var(--primary-shade);
+        }
+      }
+
+      &.focus-visible {
+        .header-status__icon {
+          fill: var(--primary-light);
+        }
+      }
     }
 
     &__icon {
       width: inherit;
       height: inherit;
       fill: var(--text-gray);
+      transition: fill .3s ease-in;
     }
   }
 
@@ -121,6 +162,25 @@
   width: 24px;
   height: 24px;
   margin-right: 25px;
+  outline: none;
+
+  &:hover:not(:focus-visible) {
+    .search__icon {
+      stroke: var(--primary-light);
+    }
+  }
+
+  &:active:not(:focus-visible) {
+    .search__icon {
+      stroke: var(--primary-shade);
+    }
+  }
+
+  &.focus-visible {
+    .search__icon {
+      stroke: var(--primary-light);
+    }
+  }
 
   &__icon {
     width: inherit;
@@ -128,6 +188,7 @@
     fill: transparent;
     stroke: var(--primary);
     stroke-width: 2px;
+    transition: all .3s ease-in-out;
   }
 }
 
@@ -136,6 +197,10 @@
   width: 46px;
   height: 58px;
   background-color: var(--light-color);
+
+  @include big-desktop {
+    display: none;
+  }
 
   &__value {
     padding: 7px 5.5px;

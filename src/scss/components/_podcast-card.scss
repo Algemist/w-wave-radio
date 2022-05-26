@@ -59,13 +59,38 @@
     right: 33px;
     padding: 11px 12px;
     border: 2px solid var(--text-gray);
+    outline: none;
     border-radius: 100%;
+    transition: all .3s ease-in-out;
+
+    &:hover:not(:focus-visible) {
+      border-color: var(--primary);
+      .podcast-card__icon {
+        fill: var(--primary);
+      }
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: var(--primary-shade);
+      border-color: var(--primary-shade);
+      .podcast-card__icon {
+        fill: var(--white);
+      }
+    }
+
+    &.focus-visible {
+      border-color: var(--primary-light);
+      .podcast-card__icon {
+        fill: var(--primary-light);
+      }
+    }
   }
 
   &__icon {
     width: 12px;
     height: 16px;
     fill: var(--text-gray);
+    transition: all .3s ease-in-out;
   }
 
   &__content {
@@ -101,12 +126,43 @@
 
 .btn-rating {
   @include flex-v-center;
+  position: relative;
   color: var(--text-gray);
+  outline: none;
+  transition: all .3s ease-in-out;
   &__icon {
     width: 12px;
     height: 13px;
     margin-right: 6px;
     fill: currentColor;
+    z-index: 1;
+  }
+
+  &__value {
+    z-index: 1;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: var(--primary);
+  }
+
+  &:active:not(:focus-visible) {
+    color: var(--primary-shade);
+  }
+
+  &.focus-visible {
+    color: white;
+    &::before{
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background-color: var(--primary-light);
+      transition: all .3s ease-in-out;
+      z-index: 0;
+    }
   }
 }
 

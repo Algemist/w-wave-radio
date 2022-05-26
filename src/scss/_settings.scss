@@ -48,9 +48,10 @@ a {
 
 .btn {
   font-weight: 500;
-  cursor: pointer;
   border-radius: 40px;
+  outline: none;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 
   &-main {
     padding: 25px 54px;
@@ -64,13 +65,14 @@ a {
   }
 
   &--stroke {
-    border: 2px solid currentColor;
+    border: 2px solid var(--black);
     background-color: transparent;
   }
 
   &--fill {
     background-color: var(--primary);
     color: var(--white);
+    border: 2px solid var(--primary);
   }
 }
 
@@ -110,6 +112,9 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+  @include big-desktop {
+    padding: 0 100px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -135,10 +140,39 @@ a {
 }
 
 .link {
+  position: relative;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: var(--black);
+  transition: all .3s ease-in-out;
+  outline: none;
+
+  &:hover:not(:focus-visible) {
+    color: var(--primary);
+  }
+
+  &:active:not(:focus-visible) {
+    color: var(--primary-shade);
+  }
+
+  &.focus-visible {
+    &.focus-visible {
+      color: var(--white);
+      animation: fadeEffect .3s;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -10px;
+        right: -10px;
+        bottom: -4px;
+        background-color: var(--primary-light);
+        transition: all .3s ease-in-out;
+        z-index: -1;
+      }
+    }
+  }
 }
 
 .title {
@@ -147,4 +181,9 @@ a {
   font-size: 48px;
   line-height: 100%;
   color: var(--black);
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

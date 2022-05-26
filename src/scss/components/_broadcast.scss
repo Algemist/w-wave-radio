@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     max-width: 255px;
+    margin-right: 10px;
   }
 
   &__title {
@@ -54,6 +55,23 @@
     padding: 12px 45px;
     margin-bottom: 12px;
     color: var(--black);
+
+    &:hover:not(:focus-visible) {
+      color: var(--white);
+      background-color: var(--black);
+    }
+
+    &:active:not(:focus-visible) {
+      color: var(--white);
+      background-color: var(--primary-shade);
+      border-color: var(--primary-shade);
+    }
+
+    &.focus-visible {
+      color: var(--black);
+      background-color: var(--primary-light);
+      border-color: var(--primary-shade);
+    }
 
     &-icon {
       width: 18px;

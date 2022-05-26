@@ -24,5 +24,24 @@
     width: 250px;
     align-self: center;
     color: var(--primary);
+    border-color: var(--primary);
+
+    &:hover:not(:focus-visible) {
+      color: var(--white);
+      border-color: var(--primary);
+      background-color: var(--primary);
+    }
+
+    &:active:not(:focus-visible) {
+      color: var(--white);
+      background-color: var(--primary-shade);
+      border-color: var(--primary-shade);
+    }
+
+    &.focus-visible {
+      color: var(--white);
+      background-color: var(--primary-light);
+      border-color: var(--primary-shade);
+    }
   }
 }

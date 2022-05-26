@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
 
-    &_btm {
+    &-btm {
       padding-bottom: 10px;
       text-align: center;
     }
@@ -34,10 +34,37 @@
   }
 
   &__link {
+    position: relative;
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
     color: var(--white);
+    outline: none;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+
+    &:hover:not(:focus-visible) {
+      color: var(--primary);
+    }
+
+    &:hover:not(:focus-visible) {
+      color: var(--primary-shade);
+    }
+
+    &.focus-visible {
+      color: var(--black);
+      &::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -10px;
+        right: -10px;
+        bottom: -4px;
+        background-color: var(--primary-light);
+        transition: all .3s ease-in-out;
+        z-index: -1;
+      }
+    }
   }
 
   &__copyright {
@@ -52,9 +79,32 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 21px;
+
+  &__link {
+    outline: none;
+    &:hover:not(:focus-visible) {
+      .social__icon {
+        fill: var(--primary);
+      }
+    }
+
+    &:active:not(:focus-visible) {
+      .social__icon {
+        fill: var(--primary-shade);
+      }
+    }
+
+    &.focus-visible {
+      .social__icon {
+        fill: var(--primary-light);
+      }
+    }
+  }
+
   &__icon {
     width: 24px;
     height: 24px;
     fill: var(--text-gray);
+    transition: all .3s ease-in-out;
   }
 }

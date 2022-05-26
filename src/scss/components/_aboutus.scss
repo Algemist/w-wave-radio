@@ -4,6 +4,13 @@
   &__container {
     padding-top: 94px;
     padding-bottom: 33px;
+    background-image: url("../img/aboutus-bg.png");
+    background-position: 100% 94px;
+    background-repeat: no-repeat;
+
+    @include big-desktop {
+      background-image: url("../img/aboutus-bg-1024.png");
+    }
   }
 
   &__title {
@@ -37,6 +44,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-bottom: 30px;
+
+    @include big-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__form {
@@ -52,17 +63,54 @@
     padding: 30px 32px;
     grid-column: 2 span;
     resize: none;
+    transition: all .3s ease-in-out;
+
+    &:hover:not(:focus-visible) {
+      background-color: rgba(230, 232, 236, 0.1);
+    }
+
+    &.focus-visible {
+      background-color: rgba(230, 232, 236, 0.1);
+      border-color: var(--primary);
+    }
   }
 
   &__input {
     padding: 25px 32px;
     grid-column: 1 span;
+    transition: all .3s ease-in-out;
+
+    &:hover:not(:focus-visible) {
+      background-color: rgba(230, 232, 236, 0.1);
+    }
+
+    &.focus-visible {
+      background-color: rgba(230, 232, 236, 0.1);
+      border-color: var(--primary);
+    }
   }
 
   &__btn {
     width: 212px;
+    font-size: 20px;
+    line-height: 20px;
     padding: 25px 54px;
     grid-column: 2 span;
+
+    &:hover:not(:focus-visible) {
+      background-color: var(--primary-light);
+      border-color: var(--primary-light);
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: var(--primary-shade);
+      border-color: var(--primary-shade);
+    }
+
+    &.focus-visible {
+      background-color: var(--primary-light);
+      border-color: var(-primary-shade);
+    }
   }
 
   &__textarea,
@@ -142,5 +190,9 @@
 
   &__pic img{
     margin-bottom: 30px;
+
+    @include big-desktop {
+      width: 100%;
+    }
   }
 }

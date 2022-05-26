@@ -35,4 +35,21 @@
       color: var(--primary);
     }
   }
+
+  &__btn {
+    &:hover:not(:focus-visible) {
+      background-color: var(--primary-light);
+      border-color: var(--primary-light);
+    }
+
+    &:active:not(:focus-visible) {
+      background-color: var(--primary-shade);
+      border-color: var(--primary-shade);
+    }
+
+    &.focus-visible {
+      background-color: var(--primary-light);
+      border-color: var(-primary-shade);
+    }
+  }
 }

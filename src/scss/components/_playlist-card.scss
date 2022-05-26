@@ -2,31 +2,108 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  outline: none;
+
+  &:hover:not(:focus-visible) {
+    .playlist-card__content {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .playlist-card__title,
+    .playlist-card__descr {
+      color: var(--white);
+    }
+
+    .playlist-card__pic::before,
+    .playlist-card__pic::after {
+      opacity: 1;
+    }
+  }
+
+  &:active:not(:focus-visible) {
+    .playlist-card__content {
+      background-color: var(--primary-shade);
+      border-color: var(--primary-shade);
+    }
+
+    .playlist-card__title,
+    .playlist-card__descr {
+      color: var(--white);
+    }
+
+    .playlist-card__pic::before,
+    .playlist-card__pic::after {
+      opacity: 1;
+    }
+  }
+
+  &.focus-visible {
+    .playlist-card__content {
+      background-color: var(--primary-light);
+      border-color: var(--primary-light);
+    }
+
+    .playlist-card__title,
+    .playlist-card__descr {
+      color: var(--white);
+    }
+
+    .playlist-card__pic::before,
+    .playlist-card__pic::after {
+      opacity: 1;
+    }
+  }
 
   &__country {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 20;
+  }
+
+  &__pic {
+    position: relative;
+    height: 160px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #121723, $alpha: .8);
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      z-index: 30;
+    }
+
+    &::after {
+      content: url("../img/playlist-btn.svg");
+      position: absolute;
+      top: 56px;
+      right: 56px;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      z-index: 60;
+    }
   }
 
   &__content {
-    position: relative;
-    top: -6px;
     height: 100%;
     padding: 16px;
     border: 1px solid var(--light-color);
+    transition: all .3s ease-in-out;
+    z-index: 50;
   }
 
   &__title {
     margin: 0;
     margin-bottom: 4px;
-  }
-
-  &__link {
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
     color: var(--black);
+    transition: all .3s ease-in-out;
   }
 
   &__descr {
@@ -35,5 +112,6 @@
     font-size: 12px;
     line-height: 12px;
     color: var(--text-gray);
+    transition: all .3s ease-in-out;
   }
 }
