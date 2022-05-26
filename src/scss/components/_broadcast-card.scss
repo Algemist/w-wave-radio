@@ -47,3 +47,38 @@
     fill: currentColor;
   }
 }
+
+.choices {
+  &__inner {
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 10px;
+  }
+}
+
+.choices__list--single .choices__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--black);
+}
+
+.is-open .choices__inner {
+  border-radius: 10px 10px 0 0;
+}
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  background-color: transparent;
+  border: 1px solid var(--text-gray);
+  border-radius: 0 0 10px 10px;
+}
+
+.is-selected {
+  display: none;
+}
+
+.choices__item--choice {
+  color: var(--text-gray);
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--text-gray);
+  }
+}

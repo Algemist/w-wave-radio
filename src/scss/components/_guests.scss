@@ -24,6 +24,7 @@
   }
 
   &__descr {
+    max-width: 825px;
     margin: 0;
     margin-bottom: 50px;
     font-weight: 400;
@@ -92,13 +93,24 @@
       font-size: 16px;
       line-height: 16px;
       color: var(--white);
+      transition: color .3s ease-in-out;
+
+      &.active {
+        color: var(--primary-light);
+      }
     }
   }
 }
 
 .tab-content {
-  display: flex;
+  display: none;
   flex-direction: column;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+
+  &.active {
+    display: flex;
+  }
 
   &__list {
     display: flex;
@@ -147,4 +159,14 @@
   &__pic {
     margin-bottom: 12px;
   }
+}
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
