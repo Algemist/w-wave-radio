@@ -1,9 +1,28 @@
 <header class="header">
   <div class="header__mobile">
-    <div class="container header__container">123</div>
+    <div class="container header__container">
+      <a href="/" class="header__logo">
+        <img loading="lazy" src="img/logo.svg" class="image" width="160" height="20" alt="Логотип">
+      </a>
+      <button class="btn-reset btn btn--stroke btn-secondary header__btn header__mobile-btn">Вход</button>
+    </div>
   </div>
   <div class="header__top">
+    <div class="burger-menu" data-menu>
+      <div class="container burger-menu__container">
+        <ul class="list-reset burger-menu__list">
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">Подкасты</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">Плейлисты</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">Передачи</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">О нас</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">Гости</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="container header__container">
+      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <span class="burger__line"></span>
+      </button>
       <a href="/" class="header__logo">
         <img loading="lazy" src="img/logo.svg" class="image" width="160" height="20" alt="Логотип">
       </a>
@@ -58,6 +77,40 @@
       </div>
       <div class="age">
         <span class="age__value">12+</span>
+      </div>
+    </div>
+  </div>
+  <div class="header__mobile-btm">
+    <div class="container">
+      <button class="btn-reset stream-btn">
+        <svg class="stream-btn__icon">
+          <use xlink:href="img/sprite.svg#esc"></use>
+        </svg>
+        <span class="stream-btn__value">Что в эфире?</span>
+      </button>
+    </div>
+    <div class="container live-status">
+      <div class="header__status header-status header__prev live-status__btn">
+        <button class="btn-reset header-status__btn">
+          <svg class="header-status__icon">
+            <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+        <div class="header-status__text">
+          <span class="header-status__title">Ранее в эфире</span>
+          <h2 class="header-status__name"><a href="#" class="header-status__link">«Музыка»</a></h2>
+        </div>
+      </div>
+      <div class="header__status header-status header__next live-status__btn">
+        <button class="btn-reset header-status__btn">
+          <svg class="header-status__icon">
+            <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+        <div class="header-status__text">
+          <span class="header-status__title">Сейчас в эфире</span>
+          <h2 class="header-status__name"><a href="#" class="header-status__link">«Как так?»</a></h2>
+        </div>
       </div>
     </div>
   </div>

@@ -13,3 +13,13 @@ if (tabcontents) {
     });
   });
 };
+
+const streamBtn = document.querySelector('.stream-btn');
+const streamContainer = document.querySelector('.live-status');
+const streamStatusBtns = document.querySelectorAll('.live-status__btn');
+streamBtn.addEventListener('click', ()=> {
+  streamContainer.classList.toggle('active');
+  streamStatusBtns.forEach((el) => {
+  el.classList.toggle('active');
+  })
+})

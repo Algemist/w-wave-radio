@@ -6,6 +6,20 @@
     justify-content: space-between;
     padding-top: 94px;
     padding-bottom: 133px;
+
+    @media (max-width: 970px) {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      padding-top: 54px;
+      padding-bottom: 94px;
+    }
+
+    @include mobile {
+      padding-top: 54px;
+      padding-bottom: 54px;
+    }
   }
 
   &__img {
@@ -15,11 +29,24 @@
       position: absolute;
       top: -8px;
       left: 0;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     @include big-desktop {
       margin-right: 30px;
       align-self: center;
+    }
+
+    @media (max-width: 970px) {
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 36px;
     }
   }
 
@@ -38,11 +65,26 @@
       width: 100%;
       left: 0;
       bottom: -37px;
+
+    }
+
+    @media (max-width: 970px) {
+      .offer__title::after {
+        content: url("../img/offer-line-768.png");
+      }
+    }
+
+    @include mobile {
+      font-size: 24px;
     }
   }
 
   &__content {
     max-width: 445px;
+
+    @media (max-width: 970px) {
+      max-width: none;
+    }
   }
 
   &__text {
@@ -52,6 +94,11 @@
     font-size: 16px;
     line-height: 180%;
     color: var(--white);
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 160%;
+    }
   }
 
   &__descr {
@@ -65,6 +112,11 @@
     & span {
       color: var(--promo-color);
     }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 160%;
+    }
   }
 
   &__price {
@@ -73,6 +125,11 @@
     font-size: 30px;
     line-height: 30px;
     color: var(--white);
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   &__btn {
@@ -121,6 +178,12 @@
       fill: var(--light-black);
       background-color: var(--promo-color);
       transition: all .3s ease-in-out;
+    }
+
+    @include mobile {
+      width: 256px;
+      padding: 17px 14px;
+      font-size: 16px;
     }
   }
 }

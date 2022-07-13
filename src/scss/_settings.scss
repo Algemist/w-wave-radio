@@ -57,6 +57,12 @@ a {
     padding: 25px 54px;
     font-size: 20px;
     line-height: 20px;
+
+    @include mobile {
+      padding: 17px 30px;
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   &-secondary {
@@ -114,6 +120,14 @@ a {
   max-width: var(--container-width);
   @include big-desktop {
     padding: 0 100px;
+  }
+
+  @include tablet {
+    padding: 0 114px;
+  }
+
+  @media (max-width: 651px) {
+    padding: 0 32px;
   }
 }
 
@@ -181,6 +195,9 @@ a {
   font-size: 48px;
   line-height: 100%;
   color: var(--black);
+  @include mobile {
+    font-size: 24px;
+  }
 }
 
 @keyframes fadeEffect {

@@ -4,6 +4,14 @@
   flex-direction: column;
   outline: none;
 
+  @include big-desktop {
+    flex-direction: row;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
   &:hover:not(:focus-visible) {
     .playlist-card__content {
       background-color: var(--primary);
@@ -60,11 +68,30 @@
     top: 0;
     right: 0;
     z-index: 20;
+
+    @include big-desktop {
+      right: unset;
+      left: 0;
+    }
+
+    @include mobile {
+      right: 0;
+      left: unset;
+    }
   }
 
   &__pic {
     position: relative;
     height: 160px;
+
+    @include big-desktop {
+      width: 112px;
+      height: 93%;
+
+      & img {
+        height: 100%;
+      }
+    }
 
     &:before {
       content: '';
@@ -85,6 +112,11 @@
       opacity: 0;
       transition: opacity .3s ease-in-out;
       z-index: 60;
+
+      @include big-desktop {
+        top: 28px;
+        right: 28px;
+      }
     }
   }
 
@@ -94,6 +126,17 @@
     border: 1px solid var(--light-color);
     transition: all .3s ease-in-out;
     z-index: 50;
+
+    @include big-desktop {
+      width: 100%;
+      height: 93%;
+      max-width: 143px;
+      padding: 40px 7px 38px 10px;
+    }
+
+    @include mobile {
+      padding: 10px;
+    }
   }
 
   &__title {
@@ -104,6 +147,11 @@
     line-height: 16px;
     color: var(--black);
     transition: all .3s ease-in-out;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
 
   &__descr {
@@ -113,5 +161,9 @@
     line-height: 12px;
     color: var(--text-gray);
     transition: all .3s ease-in-out;
+    @include mobile {
+      font-size: 9px;
+      line-height: 9px;
+    }
   }
 }

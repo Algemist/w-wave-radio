@@ -3,9 +3,17 @@
   &__container {
     padding-top: 96px;
     padding-bottom: 94px;
-    background-image: url("../img/hero-bg.png");
+    @include image-set("../img/hero-bg.png");
     background-position: 98.2% 49%;
     background-repeat: no-repeat;
+
+    @media (max-width: 970px) {
+      background-image: none;
+    }
+    @include mobile {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &__title {
@@ -20,6 +28,11 @@
       font-weight: 400;
       font-style: italic;
     }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 32px;
+    }
   }
 
   &__descr {
@@ -33,6 +46,10 @@
 
     & span {
       color: var(--primary);
+    }
+
+    @include mobile {
+      font-size: 14px;
     }
   }
 
@@ -51,5 +68,6 @@
       background-color: var(--primary-light);
       border-color: var(-primary-shade);
     }
+
   }
 }

@@ -1,12 +1,22 @@
 .nav {
+  margin-right: 80px;
+  @include tablet {
+    margin-right: auto;
+  }
+
+  @media (max-width: 970px) {
+    display: none;
+  }
 
   &__list {
     @include flex-v-center;
-    margin-right: 80px;
   }
 
   &__item {
     @include mr(58.75px);
+    @include tablet {
+      @include mr(25px);
+    }
   }
 
   &__link {

@@ -4,12 +4,24 @@
   &__container {
     padding-top: 94px;
     padding-bottom: 33px;
-    background-image: url("../img/aboutus-bg.png");
+    @include image-set("../img/aboutus-bg");
     background-position: 100% 94px;
     background-repeat: no-repeat;
 
     @include big-desktop {
-      background-image: url("../img/aboutus-bg-1024.png");
+      @include image-set("../img/aboutus-bg-1024");
+    }
+
+    @media (max-width: 970px) {
+      @include image-set("../img/aboutus-bg-768");
+      background-position: 0 27%;
+      padding-bottom: 94px;
+    }
+
+    @include mobile {
+      background-image: none;
+      padding-top: 54px;
+      padding-bottom: 54px;
     }
   }
 
@@ -27,16 +39,24 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--text-gray);
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__descr {
     max-width: 634px;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 172px;
     font-weight: 400;
     font-size: 20px;
     line-height: 160%;
     color: var(--text-gray);
+
+    @include mobile {
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
   }
 
   &__content {
@@ -54,6 +74,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -111,6 +136,12 @@
       background-color: var(--primary-light);
       border-color: var(-primary-shade);
     }
+
+    @include mobile {
+        padding: 17px 44.5px;
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   &__textarea,
@@ -127,10 +158,16 @@
     &::placeholder {
       color: var(--text-gray);
     }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   &__label {
     position: relative;
+    align-self: flex-start;
     cursor: pointer;
 
     &-value {
@@ -158,6 +195,11 @@
         opacity: 0;
         transition: opacity .3s ease-in-out;
       }
+
+      @include mobile {
+        font-size: 9px;
+        line-height: 9px;
+      }
     }
   }
 }
@@ -178,6 +220,10 @@
     font-size: 20px;
     line-height: 20px;
     color: var(--white);
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__descr {
@@ -186,6 +232,10 @@
     font-size: 16px;
     line-height: 24px;
     color: var(--text-gray);
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   &__pic img{

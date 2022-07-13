@@ -3,10 +3,16 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    padding: 94px 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
 
     @include big-desktop {
       flex-direction: column;
+    }
+
+    @include mobile {
+      padding-top: 54px;
+      padding-bottom: 54px;
     }
   }
 
@@ -24,16 +30,54 @@
     padding-top: 14px;
 
     @include big-desktop {
-     justify-self: center;
-     justify-content: center;
-     column-gap: 50px;
+      margin-bottom: 81px;
+      grid-template-columns: repeat(3, 1fr);
+      justify-self: center;
+      justify-content: center;
+      column-gap: 50px;
+    }
+
+    @media (max-width: 1174px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 920px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 420px) {
+      grid-template-columns: repeat(2, 112px);
+    }
+  }
+
+  &__mobile {
+    position: relative;
+    display: none;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: -30px;
+      border: 1px solid var(--shade-gray);
+    }
+
+    @include big-desktop {
+      display: block;
+
+      .playlist__descr,
+      .playlist__copyright {
+        display: block;
+      }
+
+      .playlist__age {
+        display: flex;
+      }
     }
   }
 
   &__form {
     position: relative;
-    display: flex;
-    flex-direction: column;
+
     margin-bottom: 66px;
 
     &::after {
@@ -45,17 +89,34 @@
     }
 
     @include big-desktop {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-
       &::after {
         content: none;
       }
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
-  &__label:not(:last-child) {
-    margin-bottom: 26px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include big-desktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1174px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
   }
 
   &__title {
@@ -68,6 +129,9 @@
     font-size: 16px;
     line-height: 16px;
     color: var(--text-gray);
+    @include mobile {
+      display: none;
+    }
   }
 
   &__label {
@@ -135,6 +199,11 @@
     @include big-desktop {
       display: none;
     }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   &__copyright {
@@ -147,6 +216,10 @@
 
     @include big-desktop {
       display: none;
+    }
+
+    @include mobile {
+      font-size: 12px;
     }
   }
 

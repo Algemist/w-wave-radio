@@ -5,6 +5,9 @@
   transition: all .3s ease-in-out;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
+  @include mobile {
+    flex-direction: column;
+  }
 
   &_hidden {
    display: none;
@@ -20,6 +23,11 @@
     line-height: 10px;
     color: var(--black);
     background-color: var(--light-color);
+
+    @include mobile {
+      bottom: unset;
+      top: -1;
+    }
   }
 
   &__time {
@@ -41,6 +49,11 @@
     font-size: 20px;
     line-height: 20px;
     color: var(--black);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   &__author {
@@ -50,6 +63,10 @@
     font-size: 16px;
     line-height: 16px;
     color: var(--text-gray);
+    @include mobile {
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
 
   &__btn-play {
@@ -84,6 +101,11 @@
         fill: var(--primary-light);
       }
     }
+
+    @include mobile {
+      top: 22px;
+      right: 22px;
+    }
   }
 
   &__icon {
@@ -106,6 +128,10 @@
     padding-left: 30px;
     padding-top: 24px;
     padding-bottom: 24px;
+
+    @include mobile {
+      padding: 16px;
+    }
   }
 
   &__ratings {

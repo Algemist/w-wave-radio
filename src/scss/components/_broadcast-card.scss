@@ -35,6 +35,9 @@
     min-height: 112px;
     padding: 20px 16px;
     border: 1px solid var(--light-color);
+    @include mobile {
+      padding: 10px 10px 12px 10px;
+    }
   }
 
   &__pic {
@@ -49,6 +52,10 @@
     font-size: 20px;
     line-height: 20px;
     color: var(--black);
+    @include mobile {
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
 
   &__descr {
@@ -58,6 +65,10 @@
     font-size: 12px;
     line-height: 12px;
     color: var(--text-gray);
+    @include mobile {
+      font-size: 9px;
+      line-height: 9px;
+    }
   }
 }
 
@@ -76,10 +87,13 @@
     height: 12px;
     fill: currentColor;
   }
+  @include mobile {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
 
 .choices {
-
   &:hover:not(:focus-visible) {
     .choices__inner {
       background-color: rgba(230, 232, 236, 0.4);
@@ -111,7 +125,7 @@
   border-radius: 10px 10px 0 0;
 }
 .choices__list--dropdown, .choices__list[aria-expanded] {
-  background-color: transparent;
+  background-color: var(--white);
   border: 1px solid var(--text-gray);
   border-radius: 0 0 10px 10px;
 }
@@ -136,4 +150,8 @@
   &:not(:last-child) {
     border-bottom: 1px solid var(--text-gray);
   }
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 10px;
 }

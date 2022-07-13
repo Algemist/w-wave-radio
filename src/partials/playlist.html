@@ -4,51 +4,132 @@
       <h2 class="title playlist__title">Плейлисты</h2>
       <div class="playlist__subtitle">Жанр</div>
       <form class="playlist__form">
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Постпанк</span>
-        </label>
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Хардкор</span>
-        </label>
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Панк-рок</span>
-        </label>
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Рок</span>
-        </label>
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Прогрессивный рок</span>
-        </label>
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Электронная музыка</span>
-        </label>
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Классическая музыка</span>
-        </label>
-        <label class="playlist__label">
-          <input type="radio" name="playlist" class="playlist__label-input">
-          <span class="playlist__label-value">Звуки природы и шум города</span>
-        </label>
+        <ul class="list-reset playlist__list">
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value">Постпанк</span>
+            </label>
+          </li>
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value">Хардкор</span>
+            </label>
+          </li>
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value">Панк-рок</span>
+            </label>
+          </li>
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value">Рок</span>
+            </label>
+          </li>
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value">Прогрессивный рок</span>
+            </label>
+          </li>
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value">Электронная музыка</span>
+            </label>
+          </li>
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value">Классическая музыка</span>
+            </label>
+          </li>
+          <li class="playlist__item">
+            <label class="playlist__label">
+              <input
+                type="radio"
+                name="playlist"
+                class="playlist__label-input"
+              />
+              <span class="playlist__label-value"
+                >Звуки природы и шум города</span
+              >
+            </label>
+          </li>
+        </ul>
       </form>
-      <p class="playlist__descr">Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних.</p>
+      <p class="playlist__descr">
+        Раздел «Плейлисты» может содержать информацию, не предназначенную для
+        несовершеннолетних.
+      </p>
       <small class="playlist__copyright">© 2021 l W-Wave</small>
-      <div class="playlist__age">18+</div>
+      <span class="playlist__age">18+</span>
     </div>
     <div class="playlist__grid">
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-1.avif" type="image/avif">
-          <source srcset="img/playlist-1.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-1.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Ploho'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-1-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-1-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-1-1024.jpg"
+          />
+          <source srcset="img/playlist-1.webp" type="image/webp" />
+          <source srcset="img/playlist-1.avif" type="image/avif" />
+          <source srcset="img/playlist-1.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-1.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Ploho'"
+          />
         </picture>
-        <img src="img/playlist-rus.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-rus.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Ploho</h3>
           <p class="playlist-card__descr">3 последних альбома</p>
@@ -56,11 +137,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-2.avif" type="image/avif">
-          <source srcset="img/playlist-2.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-2.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Molchat Doma'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-2-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-2-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-2-1024.jpg"
+          />
+          <source srcset="img/playlist-2.avif" type="image/avif" />
+          <source srcset="img/playlist-2.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-2.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Molchat Doma'"
+          />
         </picture>
-        <img src="img/playlist-rus.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-rus.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Molchat Doma</h3>
           <p class="playlist-card__descr">Все песни</p>
@@ -68,11 +174,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-3.avif" type="image/avif">
-          <source srcset="img/playlist-3.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-3.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Motorama'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-3-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-3-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-3-1024.jpg"
+          />
+          <source srcset="img/playlist-3.avif" type="image/avif" />
+          <source srcset="img/playlist-3.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-3.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Motorama'"
+          />
         </picture>
-        <img src="img/playlist-rus.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-rus.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Motorama</h3>
           <p class="playlist-card__descr">Все синглы</p>
@@ -80,11 +211,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-4.avif" type="image/avif">
-          <source srcset="img/playlist-4.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-4.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Human Tetris'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-4-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-4-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-4-1024.jpg"
+          />
+          <source srcset="img/playlist-4.avif" type="image/avif" />
+          <source srcset="img/playlist-4.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-4.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Human Tetris'"
+          />
         </picture>
-        <img src="img/playlist-rus.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-rus.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Human Tetris</h3>
           <p class="playlist-card__descr">3 последних альбома</p>
@@ -92,11 +248,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-5.avif" type="image/avif">
-          <source srcset="img/playlist-5.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-5.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Буерак'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-5-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-5-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-5-1024.jpg"
+          />
+          <source srcset="img/playlist-5.avif" type="image/avif" />
+          <source srcset="img/playlist-5.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-5.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Буерак'"
+          />
         </picture>
-        <img src="img/playlist-rus.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-rus.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Буерак</h3>
           <p class="playlist-card__descr">Все EP</p>
@@ -104,11 +285,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-6.avif" type="image/avif">
-          <source srcset="img/playlist-6.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-6.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Июльские Дни'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-6-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-6-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-6-1024.jpg"
+          />
+          <source srcset="img/playlist-6.avif" type="image/avif" />
+          <source srcset="img/playlist-6.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-6.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Июльские Дни'"
+          />
         </picture>
-        <img src="img/playlist-rus.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-rus.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Июльские Дни</h3>
           <p class="playlist-card__descr">Альбом «Колокол»</p>
@@ -116,11 +322,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-7.avif" type="image/avif">
-          <source srcset="img/playlist-7.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-7.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Joy Division'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-7-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-7-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-7-1024.jpg"
+          />
+          <source srcset="img/playlist-7.avif" type="image/avif" />
+          <source srcset="img/playlist-7.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-7.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Joy Division'"
+          />
         </picture>
-        <img src="img/playlist-uk.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-uk.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Joy Division</h3>
           <p class="playlist-card__descr">Лучшее за всё время</p>
@@ -128,11 +359,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-8.avif" type="image/avif">
-          <source srcset="img/playlist-8.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-8.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'The Cure'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-8-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-8-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-8-1024.jpg"
+          />
+          <source srcset="img/playlist-8.avif" type="image/avif" />
+          <source srcset="img/playlist-8.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-8.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'The Cure'"
+          />
         </picture>
-        <img src="img/playlist-uk.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-uk.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">The Cure</h3>
           <p class="playlist-card__descr">Лучшее за всё время</p>
@@ -140,11 +396,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-9.avif" type="image/avif">
-          <source srcset="img/playlist-9.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-9.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'The Smiths'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-9-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-9-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-9-1024.jpg"
+          />
+          <source srcset="img/playlist-9.avif" type="image/avif" />
+          <source srcset="img/playlist-9.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-9.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'The Smiths'"
+          />
         </picture>
-        <img src="img/playlist-uk.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-uk.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">The Smiths</h3>
           <p class="playlist-card__descr">Период 1984-1988</p>
@@ -152,11 +433,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-10.avif" type="image/avif">
-          <source srcset="img/playlist-10.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-10.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'New Order'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-10-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-10-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-10-1024.jpg"
+          />
+          <source srcset="img/playlist-10.avif" type="image/avif" />
+          <source srcset="img/playlist-10.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-10.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'New Order'"
+          />
         </picture>
-        <img src="img/playlist-uk.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-uk.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">New Order</h3>
           <p class="playlist-card__descr">Хиты</p>
@@ -164,11 +470,36 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-11.avif" type="image/avif">
-          <source srcset="img/playlist-11.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-11.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Bauhaus'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-11-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-11-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-11-1024.jpg"
+          />
+          <source srcset="img/playlist-11.avif" type="image/avif" />
+          <source srcset="img/playlist-11.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-11.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Bauhaus'"
+          />
         </picture>
-        <img src="img/playlist-uk.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-uk.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Bauhaus</h3>
           <p class="playlist-card__descr">Все синглы</p>
@@ -176,16 +507,49 @@
       </a>
       <a href="#" class="playlist-card">
         <picture class="playlist-card__pic">
-          <source srcset="img/playlist-12.avif" type="image/avif">
-          <source srcset="img/playlist-12.webp" type="image/webp">
-          <img loading="lazy" src="img/playlist-12.jpg" class="image" width="160" height="160" alt="Обложка плейлиста 'Gang Of Four'">
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-12-1024.avif"
+            type="image/avif"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-12-1024.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 1440px)"
+            srcset="img/playlist-12-1024.jpg"
+          />
+          <source srcset="img/playlist-12.avif" type="image/avif" />
+          <source srcset="img/playlist-12.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/playlist-12.jpg"
+            class="image"
+            width="160"
+            height="160"
+            alt="Обложка плейлиста 'Gang Of Four'"
+          />
         </picture>
-        <img src="img/playlist-uk.jpg" alt="Страна исполнителя" class="playlist-card__country">
+        <img
+          src="img/playlist-uk.jpg"
+          alt="Страна исполнителя"
+          class="playlist-card__country"
+        />
         <div class="playlist-card__content">
           <h3 class="playlist-card__title">Gang Of Four</h3>
           <p class="playlist-card__descr">3 последних альбома</p>
         </div>
       </a>
+    </div>
+    <div class="playlist__mobile">
+      <p class="playlist__descr">
+        Раздел «Плейлисты» может содержать информацию, не предназначенную для
+        несовершеннолетних.
+      </p>
+      <small class="playlist__copyright">© 2021 l W-Wave</small>
+      <div class="playlist__age">18+</div>
     </div>
   </div>
 </section>
